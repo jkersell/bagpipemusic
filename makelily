@@ -1,11 +1,11 @@
-#!/usr/bin/env python -u
+#!/usr/bin/python -u
 import codecs, os, string, subprocess, sys
 from optparse import OptionParser
 
 class MakeLily:
     # Path constants
     EDITOR = 'subl'
-    LILYPOND = '~/bin/lilypond'
+    LILYPOND = '/usr/bin/lilypond'
     READER = 'open -a Preview.app '
     SCRIPT_PATH = os.path.expanduser('~/Documents/Sheetmusic/Bagpipe')
 
@@ -92,9 +92,9 @@ class MakeLily:
 #(set-global-staff-size """+self.options.staffsize+""")
 #(set-default-paper-size \""""+self.options.papersize+"""\" '"""+self.options.paperdir+""")
 
-\\include "./bagpipe_new.ly"
-\\include "./bagpipe_extra.ly"
-\\include "./"""+header_format+""".ly"
+\\include "bagpipe_new.ly"
+\\include "bagpipe_extra.ly"
+\\include \""""+header_format+""".ly"
 
 % Local tweaks
 \\paper {
