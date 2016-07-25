@@ -10,9 +10,6 @@ today = #(strftime "%B %e, %Y" (localtime (current-time)))
     raggedbottom = ##t
     tagline = \markup {
         \line {
-            "P/S Sven Axelsson, MPD,"
-            \with-url #"http://svenax.net/site/sheetmusic"
-            "http://svenax.net/site/sheetmusic"
             \concat { "(rev. " \today ")" }
         }
     }
